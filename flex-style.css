@@ -1,0 +1,31 @@
+body{
+
+}
+
+.main-div{
+	display:flex;
+}
+
+.one{
+	background-color:black;
+}
+
+.two{
+	background-color:red;
+}
+
+.three{
+	background-color:yellow;
+}
+
+.four{
+	background-color:green;
+}
+
+.five{
+	background-color:gray;
+}
+
+.six{
+	background-color:pink;
+}
