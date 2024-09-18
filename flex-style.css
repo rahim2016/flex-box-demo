@@ -2,12 +2,16 @@ body{
 
 }
 
-.main-div{
-	display:flex;
+.flex-container{
+	display:flex; /* This defines a flex container */
+	flex-direction:row;  /* Set the flow direction of items : row | row-reverse | column | column-reverse */
+	flex-wrap:wrap; /* Allow items to wrap as needed : wrap | nowrap | wrap-reverse */
+	/* flex-flow:row wrap; Shorthand for the flex-direction and flex-wrap : column wrap*/
+	justify-content: flex-start; /* Defines the alignment of the items: start | end | center | flex-start | flex-end | space-between | space-around | space-between | space-evenly*/
 }
 
 .one{
-	background-color:black;
+	background-color:blue;
 }
 
 .two{
@@ -28,4 +32,10 @@ body{
 
 .six{
 	background-color:pink;
+}
+
+.flex-item{
+	width:300px;
+	height:200px;
+	margin:20px;
 }
