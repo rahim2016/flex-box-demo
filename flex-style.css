@@ -1,41 +1,108 @@
-body{
-
+.flex-container {
+    /* This defines a flex container */
+    display: flex;
+    /* Set the flow direction of items : row | row-reverse | column | column-reverse */
+    flex-direction: row;
+    /* Allow items to wrap as needed : wrap | nowrap | wrap-reverse */
+    flex-wrap: wrap;
+    /* flex-flow:row wrap; Shorthand for the flex-direction and flex-wrap : column wrap*/
+    /* Defines the alignment of the items on the horizontally axis: start | end | center | flex-start | flex-end | 
+	space-between | space-around | space-between | space-evenly*/
+    justify-content: flex-start;
+    /*This controls the space between flex items: gap | row-gap | column-gap*/
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
-.flex-container{
-	display:flex; /* This defines a flex container */
-	flex-direction:row;  /* Set the flow direction of items : row | row-reverse | column | column-reverse */
-	flex-wrap:wrap; /* Allow items to wrap as needed : wrap | nowrap | wrap-reverse */
-	/* flex-flow:row wrap; Shorthand for the flex-direction and flex-wrap : column wrap*/
-	justify-content: flex-start; /* Defines the alignment of the items: start | end | center | flex-start | flex-end | space-between | space-around | space-between | space-evenly*/
+.one {
+    background-color: blue;
+    color: #fff;
+    /*This controls the order in which the item appear in the flex container*/
+    order: 1;
+    flex-basis: 60%;
 }
 
-.one{
-	background-color:blue;
+.two {
+    background-color: red;
+    order: 0;
+    /*This defines the default size of an element and the remaining size distributed.*/
+    flex-basis: 30%;
+    color: #fff;
 }
 
-.two{
-	background-color:red;
+.three {
+    background-color: yellow;
+    order: 2;
+    flex-basis: 50%;
 }
 
-.three{
-	background-color:yellow;
+.four {
+    background-color: green;
+    order: 3;
+    /*this defines the ability of the item to grow if necessary.*/
+    flex-grow: 4;
 }
 
-.four{
-	background-color:green;
+.five {
+    background-color: gray;
+    order: 4;
+    /*This is the shorthand for flex-grow, flex-shrink and flex-basis combined*/
+    flex: none;
+    /*Allow the default alignment to be overriden for individual flex items*/
+    align-self: flex-end;
 }
 
-.five{
-	background-color:gray;
+.six {
+    background-color: pink;
+    order: 5;
+    /*this defines the ability of the item to shrink if necessary.*/
+    flex-shrink: 5;
 }
 
-.six{
-	background-color:pink;
+.flex-item {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    /* This defines a flex container */
+    display: flex;
+    /*This define how flex items are align in a container along the vertical axis: flex-start | flex-end | center | stretch | baseline | */
+    align-items: center;
+    /* Defines the alignment of the items on the horizontally axis*/
+    justify-content: space-around;
+    /* align-content: space-around; */
+    flex-wrap: wrap;
+    /*This works when flex-wrap is set to wrap. 
+	 It aligns flex container's items verticaly:  start | end | center | flex-start | flex-end | 
+	space-between | space-around | space-between | space-evenly */
+    /*  align-content: center; */
 }
 
-.flex-item{
-	width:300px;
-	height:200px;
-	margin:20px;
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 17px;
+}
+
+.grid-container {
+    /* This defines a grid container */
+    display: grid;
+    /* This crate two equal columns */
+    grid-template-columns: 1fr 1fr;
+    /* This crate three rows with size of 200px*/
+    grid-template-rows: repeat(3, 200px);
+    /* This define grid layout with the grid-template-areas approach*/
+    grid-template-areas: "head head" "nav main" "foot foot";
+    border: #000 solid 1px;
 }
